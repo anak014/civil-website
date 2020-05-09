@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include header.html %}
+  <body class="bg-light">
+    {% include navbar.html %}
+    <div class="container shadow bg-white p-4 my-4 rounded">
+      <h1 class="mt-2 mb-1 text-center font-weight-lighter">
+        {{ page.title }}
+      </h1>
+      <hr class="divider mb-4" />
+      <div class="row justify-content-center">
+        {% for product in page.products %}
+        <div class="col-md-4 mb-3">
+          <div class="p-3 card shadow-sm h-100 product-card">
+            <h5 class="text-center product-title">
+              {{ product.title }}
+            </h5>
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                {% for image in product.images %}
+                <div
+                  class="carousel-item {% if forloop.index == 1 %}active{% endif %}"
+                >
+                  <img
+                    src="{{ image }}"
+                    class="d-block w-100 img-fluid shadow-sm product-img"
+                  />
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <table class="table product-table mt-2">
+              <caption>
+                {{ product.description }}
+              </caption>
+              {% for detail in product.details %}
+              <tr>
+                <td class="font-weight-light product-cell">{{ detail[0] }}</td>
+                <td class="text-right product-cell">{{ detail[1] }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% include footer.html %}
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+title: Madhya Pradesh Steel Industry
+permalink: pretty
+sass:
+  sass_dir: css
+  style: compressed
+defaults:
+  - scope:
+      path: "assets/brochures/machines"
+    values:
+      machine: true
+  - scope:
+      path: "assets/brochures/hand-tools"
+    values:
+      handtool: true
+  - scope:
+      path: "assets/clients"
+    values:
+      client: true
