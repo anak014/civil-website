@@ -7,24 +7,41 @@
 }
 
 .caption-img {
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .dropdown-item {
   font-size: 80%;
 }
 
-.cover-img {
-  max-height: 400px;
+.carousel-caption {
+  color: rgb(35, 93, 152);
+  transition: all 0.3s ease-in-out;
+  top: 5%;
+}
+
+.carousel-caption:hover {
+  top: 5%;
+  color: rgb(30, 87, 145);
+  transform: scale(1.1);
 }
 
 .product-img {
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 350px;
+  max-height: 350px;
+}
+
+#bannermap {
+  position: absolute;
+  height: 10px;
+  left: 50%;
 }
 
 .site-title {
-  height: 100px;
+  background-color: rgb(35, 93, 152);
+  color: white;
+  margin: 0;
+  font-size: 68%;
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
@@ -49,16 +66,19 @@ td.product-cell {
 
 .product-title {
   color: rgb(35, 93, 152);
+  line-height: 1.2em;
+  height: 2.4em; /* height is 2x line-height, so two lines will display */
+  overflow: hidden; /* prevents extra lines from being visible */
 }
 
 .product-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-  transform: scale(1.02, 1.02);
 }
 
 .product-card {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.03s;
+  cursor: pointer;
 }
 
 .navbar {
@@ -90,6 +110,15 @@ td.product-cell {
   font-size: 75%;
 }
 
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .divider {
   width: 70px;
   background-color: rgb(35, 93, 152);
@@ -104,4 +133,12 @@ td.product-cell {
 
 .nav-item {
   font-size: 150%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23111' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23111' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }

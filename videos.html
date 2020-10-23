@@ -1,0 +1,21 @@
+---
+layout: default
+title: Videos
+videos:
+  Product name 1: https://www.youtube.com/embed/zpOULjyy-n8?rel=0
+  Product name 2: https://www.youtube.com/embed/zpOULjyy-n8?rel=0
+  Product name 3: https://www.youtube.com/embed/zpOULjyy-n8?rel=0
+---
+
+{% for video in page.videos %}
+<h3 class="mt-2 mb-2 text-center font-weight-lighter">
+  {{ video[0] }}
+</h3>
+<div class="embed-responsive embed-responsive-16by9 mb-3">
+  <iframe
+    class="embed-responsive-item"
+    src="{{ video[1] }}"
+    allowfullscreen
+  ></iframe>
+</div>
+{% endfor %}
