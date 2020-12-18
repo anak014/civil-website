@@ -38,10 +38,11 @@
 }
 
 .site-title {
-  background-color: rgb(35, 93, 152);
+  /* background-color: rgb(35, 93, 152); */
   color: white;
   margin: 0;
   font-size: 68%;
+  height: 70px;
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
