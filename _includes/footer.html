@@ -74,7 +74,7 @@
     modal.find(".modal-body .description").text(description);
 
     const tableRowMapper = (key) =>
-      `<tr><td class="font-weight-light product-cell">${key}</td><td class="text-right product-cell">${details[key]}</td></tr>`;
+      `<tr><td class="font-weight-light product-cell">${key}</td><td class="text-right product-cell">${details[key] || ''}</td></tr>`;
     let table = `<table class="table product-table mt-2"><caption>${description}</caption>${Object.keys(
       details
     )
